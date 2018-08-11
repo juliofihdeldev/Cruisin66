@@ -11,8 +11,8 @@ export default class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-        email: 'Your email',
-        password: 'Your password',
+        email: '',
+        password: '',
         };
     }
 
@@ -29,11 +29,13 @@ export default class Login extends React.Component {
           <View style={styles.formStyle}>
             <TextInput
               style={styles.inputStyle}
+              placeholder="Your email"
               onChangeText={(email) => this.setState({ email })}
               value={this.state.email}
             />
             <TextInput
               style={styles.inputStyle}
+              placeholder="Your password"
               onChangeText={(password) => this.setState({ password })}
               value={this.state.password}
             />
